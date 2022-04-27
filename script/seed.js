@@ -1,6 +1,6 @@
 'use strict'
 
-const {db, models: {User} } = require('../server/db')
+const {db, models: {User, Poem, PoemLine} } = require('../server/db')
 
 /**
  * seed - this function clears the database, updates tables to
@@ -16,7 +16,60 @@ async function seed() {
     User.create({ username: 'murphy', password: '123' }),
   ])
 
-  console.log(`seeded ${users.length} users`)
+  //Creating Poems
+
+  const poems = await Promise.all([
+    Poem.create({
+      title: "bright sounds"
+    }),
+    Poem.create({
+      title: "gradient sky"
+    }),
+    Poem.create({
+      title: "everything bagels in spring"
+    }),
+    Poem.create({
+      title: "ginger tea"
+    }),
+    Poem.create({
+      title: "for when the first stars appear"
+    })
+  ]);
+
+  // Creating Poem lines
+
+  const lines = await Promise.all([
+    PoemLine.create({
+      line: "you encapsulate me"
+    }),
+    PoemLine.create({
+      line: "how are you so perfect every night"
+    }),
+    PoemLine.create({
+      line: "and cherry blossoms to shake the winter blues" 
+    }),
+    PoemLine.create({
+      line: "ginger tea"
+    }),
+    PoemLine.create({
+      line: "take me up to the sky"
+    }),
+    PoemLine.create({
+      line: "show me what infinity feels like"
+    }),
+  ]);
+
+  await poems[0].addPoemLine(lines[0]);
+  await poems[1].addPoemLine(lines[1]);
+  await poems[2].addPoemLine(lines[2]);
+  await poems[3].addPoemLine(lines[3]);
+  await poems[5].addPoemLine(lines[4]);
+  await poems[5].addPoemLine(lines[5]);
+
+  console.log(`seeded ${users.length} users`);
+  console.log(`seeded ${poems.length} poems`);
+  console.log(`seeded ${lines.length} poem lines`);
+
   console.log(`seeded successfully`)
   return {
     users: {
