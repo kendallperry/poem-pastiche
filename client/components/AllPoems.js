@@ -13,7 +13,7 @@ class AllPoems extends React.Component {
 
     render() {
         console.log("PROPS", this.props)
-        const { poems } = this.state;
+        const { poems } = this.props;
         return (
             <div id="all-poems-container">
                 <h1>Poems</h1>
