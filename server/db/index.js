@@ -4,7 +4,7 @@ const User = require('./models/User');
 const Poem = require('./models/Poem');
 const PoemLine = require('./models/PoemLine');
 
-PoemLine.belongsTo(Poem, { foreignKey: { allowNull: false } });
+PoemLine.belongsTo(Poem);
 Poem.hasMany(PoemLine);
 
 User.hasMany(PoemLine);

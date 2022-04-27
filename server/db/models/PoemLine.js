@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-const PoemLine = db.define('poemLine', {
+const PoemLine = db.define('line', {
     line: {
         type: Sequelize.STRING,
         allowNull: false,
