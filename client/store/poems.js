@@ -21,10 +21,10 @@ export const fetchPoems = () => {
 };
 
 export default (state = [], action) => {
-    switch (action.type) {
-        case SET_POEMS:
-          return action.poems;
-        default: 
-          return state; 
-    }
-}
+  switch (action.type) {
+    case SET_POEMS:
+      return action.poems;
+    default:
+      return state;
+  }
+};
