@@ -20,11 +20,11 @@ export const fetchPoems = () => {
   };
 };
 
-export default (state = [], action) => {
+export default function poemReducer (state = [], action) {
   switch (action.type) {
     case SET_POEMS:
       return action.poems;
     default:
       return state;
   }
-};
+}
