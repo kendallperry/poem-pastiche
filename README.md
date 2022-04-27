@@ -1,3 +1,3 @@
-# Kendall's Stackathon Project
+# Poem Pastiche
 
-Watch here for updates on project development!
+a collaborative collage of words
