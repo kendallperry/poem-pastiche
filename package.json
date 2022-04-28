@@ -17,6 +17,8 @@
     "test:dev:models": "npm run test:dev -- --grep=model",
     "test:dev:routes": "npm run test:dev -- --grep=route"
   },
+  "author": "Fullstack Academy of Code",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "bcrypt": "^5.0.0",
