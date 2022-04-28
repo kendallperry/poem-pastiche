@@ -9,11 +9,12 @@ const _addLine = (line) => {
   };
 };
 
-export const addLine = (line) => {
+export const addLine = (line, history) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.post("api/line", line);
+      const { data } = await axios.post(`api/line`, line);
       dispatch(_addLine(data));
+      history.push("/poems");
     } catch (err) {
       console.log("there was an error adding a line!".err);
     }

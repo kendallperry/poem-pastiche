@@ -4,13 +4,13 @@ const {
 } = require("../db");
 
 router.post("/", async (req, res, next) => {
-    try {
-        const { line } = req.body;
-        const newLine = await PoemLine.create({ line });
-        res.status(201).send(newLine);
-    } catch (err) {
-        next(err);
-    }
+  try {
+    const { line, poemId } = req.body;
+    const newLine = await PoemLine.create({ line, poemId });
+    res.status(201).send(newLine);
+  } catch (err) {
+    next(err);
+  }
 });
 
-module.exports = router; 
+module.exports = router;
