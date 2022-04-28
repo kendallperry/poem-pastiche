@@ -38,6 +38,10 @@ async function seed() {
     Poem.create({
       title: "for when the first stars appear",
       userId: 1,
+    }),
+    Poem.create({
+      title: "polaroid magic",
+      userId: 1
     })
   ]);
 
@@ -72,6 +76,21 @@ async function seed() {
     PoemLine.create({
       line: "show me what infinity feels like",
       poemId: 5,
+      userId: 1,
+    }),
+    PoemLine.create({
+      line: "a memory you can hold",
+      poemId: 6,
+      userId: 1,
+    }),
+    PoemLine.create({
+      line: "to remember what this feels like",
+      poemId: 6,
+      userId: 2,
+    }),
+    PoemLine.create({
+      line: "two moments colliding, past and present",
+      poemId: 6,
       userId: 1,
     }),
   ]);

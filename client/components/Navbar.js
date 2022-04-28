@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom'
 import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
-  <div>
-    <h1>Stackathon</h1>
+  <div id="navbar">
+    <h1>poem pastiche</h1>
     <nav>
       {isLoggedIn ? (
         <div>
@@ -18,6 +18,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
       ) : (
         <div>
           {/* The navbar will show these links before you log in */}
+          <Link to="/poems">All Poems</Link>
           <Link to="/login">Login</Link>
           <Link to="/signup">Sign Up</Link>
         </div>

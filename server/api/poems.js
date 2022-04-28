@@ -1,10 +1,9 @@
 const router = require("express").Router();
-const { models: { Poem, PoemLine }} = require("../db");
+const { models: { Poem, PoemLine, User }} = require("../db");
 
 router.get("/", async (req, res, next) => {
     try {
-        // { include: PoemLine } after inside of findAll
-        const poems = await Poem.findAll()
+        const poems = await Poem.findAll({ include: [PoemLine, User] })
         res.json(poems);
     } catch (err) {
         next(err);
