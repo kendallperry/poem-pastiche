@@ -5,11 +5,13 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import auth from "./auth";
 import poems from "./poems";
 import line from "./line"
+import singlePoem from "./singlePoem"
 
 const reducer = combineReducers({
   auth,
   poems,
   line,
+  singlePoem,
 });
 
 const middleware = composeWithDevTools(
