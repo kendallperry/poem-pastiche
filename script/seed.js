@@ -12,27 +12,32 @@ async function seed() {
 
   // Creating Users
   const users = await Promise.all([
-    User.create({ username: 'cody', password: '123' }),
-    User.create({ username: 'murphy', password: '123' }),
+    User.create({ username: 'kendall', password: '123' }),
+    User.create({ username: 'grace', password: '123' }),
   ])
 
   //Creating Poems
 
   const poems = await Promise.all([
     Poem.create({
-      title: "bright sounds"
+      title: "bright sounds",
+      userId: 1,
     }),
     Poem.create({
-      title: "gradient sky"
+      title: "gradient sky",
+      userId: 1,
     }),
     Poem.create({
-      title: "everything bagels in spring"
+      title: "everything bagels in spring",
+      userId: 2,
     }),
     Poem.create({
-      title: "ginger tea"
+      title: "ginger tea",
+      userId: 2,
     }),
     Poem.create({
-      title: "for when the first stars appear"
+      title: "for when the first stars appear",
+      userId: 1,
     })
   ]);
 
@@ -40,31 +45,36 @@ async function seed() {
 
   const lines = await Promise.all([
     PoemLine.create({
-      line: "you encapsulate me"
+      line: "you encapsulate me",
+      poemId: 1,
+      userId: 1,
     }),
     PoemLine.create({
-      line: "how are you so perfect every night"
+      line: "how are you so perfect every night",
+      poemId: 2,
+      userId: 1,
     }),
     PoemLine.create({
-      line: "and cherry blossoms to shake the winter blues" 
+      line: "and cherry blossoms to shake the winter blues",
+      poemId: 3,
+      userId: 1,
     }),
     PoemLine.create({
-      line: "ginger tea"
+      line: "ginger tea",
+      poemId: 4,
+      userId: 1,
     }),
     PoemLine.create({
-      line: "take me up to the sky"
+      line: "take me up to the sky",
+      poemId: 5,
+      userId: 1,
     }),
     PoemLine.create({
-      line: "show me what infinity feels like"
+      line: "show me what infinity feels like",
+      poemId: 5,
+      userId: 1,
     }),
   ]);
-
-  await poems[0].addPoemLine(lines[0]);
-  await poems[1].addPoemLine(lines[1]);
-  await poems[2].addPoemLine(lines[2]);
-  await poems[3].addPoemLine(lines[3]);
-  await poems[5].addPoemLine(lines[4]);
-  await poems[5].addPoemLine(lines[5]);
 
   console.log(`seeded ${users.length} users`);
   console.log(`seeded ${poems.length} poems`);

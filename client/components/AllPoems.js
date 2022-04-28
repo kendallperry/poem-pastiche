@@ -16,13 +16,13 @@ class AllPoems extends React.Component {
         const { poems } = this.props;
         return (
             <div id="all-poems-container">
-                <h1>Poems</h1>
+                <h1 className="title">Poems</h1>
                 <ul id="all-poems">
                     {poems.length === 0 ? <h2>No Poems Yet!</h2> : null}
                     {poems.map((poem) => {
                         return (
-                            <div key={poem.id}>
-                                {poem.title}
+                            <div className="poem" key={poem.id}>
+                                <strong>{poem.title}</strong>
                             </div>
                         )
                     })}

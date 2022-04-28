@@ -1,9 +1,16 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Courier New', Courier, monospace
 }
 
 a {
   text-decoration: none;
+}
+
+button {
+  background-color: white;
+  border: 1px solid black;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 8px;
 }
 
 label {
@@ -18,4 +25,31 @@ nav a {
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+#all-poems-container {
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#all-poems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.title {
+  justify-content: center;
+}
+
+.poem {
+  width: 200px;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+.poem:hover {
+  border: 2px solid black;
 }
