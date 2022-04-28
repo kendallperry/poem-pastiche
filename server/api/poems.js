@@ -22,4 +22,16 @@ router.post("/", async (req, res, next) => {
   }
 });
 
+router.get("/:id", async (req, res, next) => {
+  try {
+    const singlePoem = await Poem.findOne({
+      where: { id: req.params.id },
+      include: PoemLine,
+    });
+    res.send(singlePoem);
+  } catch (err) {
+      next(err);
+  }
+});
+
 module.exports = router;
