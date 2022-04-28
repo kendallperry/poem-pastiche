@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const initialState = {};
+
 const SINGLE_POEM = "SINGLE_POEM";
 
 const getSinglePoem = (poem) => ({
@@ -18,7 +20,7 @@ export const fetchSinglePoem = (poemId) => {
   };
 };
 
-export default function singlePoemReducer(state = {}, action) {
+export default function singlePoemReducer(state = initialState, action) {
   switch (action.type) {
     case SINGLE_POEM:
       return action.poem;
