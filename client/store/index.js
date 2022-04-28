@@ -4,12 +4,12 @@ import thunkMiddleware from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import auth from "./auth";
 import poems from "./poems";
-import search from "./search";
+import line from "./line"
 
 const reducer = combineReducers({
   auth,
   poems,
-  search,
+  line,
 });
 
 const middleware = composeWithDevTools(

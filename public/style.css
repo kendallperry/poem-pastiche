@@ -1,5 +1,5 @@
 body {
-  font-family: 'Courier New', Courier, monospace
+  font-family: "Courier New", Courier, monospace;
 }
 
 a {
@@ -14,7 +14,7 @@ a:hover {
 button {
   background-color: white;
   border: 1px solid black;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   padding: 8px;
 }
 
@@ -63,9 +63,19 @@ form div {
   border: 1px solid white;
   padding: 25px;
   margin: 6px;
-  background: linear-gradient(90deg, rgba(238,174,202,0.6797312675070029) 0%, rgba(148,187,233,0.6237088585434174) 100%);  /* background: linear-gradient(152deg, rgba(255,255,255,0.6293110994397759) 0%, rgba(227,156,44,0.590095413165266) 35%, rgba(148,60,245,0.6797312675070029) 100%); */
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 0.6797312675070029) 0%,
+    rgba(148, 187, 233, 0.6237088585434174) 100%
+  );
 }
 
-/* .poem:hover {
-  border: 2px solid white;
-} */
+input {
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+#add-line-form {
+  display: flex;
+  gap: 5px;
+}

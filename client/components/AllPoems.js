@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchPoems } from "../store/poems";
-import SearchBar from "./SearchBar";
+import AddLine from "./AddLine";
 
 class AllPoems extends React.Component {
     constructor(props) {
@@ -28,6 +28,7 @@ class AllPoems extends React.Component {
                                 <p>{poem.lines[2] ? poem.lines[2].line : null}</p>
                                 <p>{poem.lines[3] ? poem.lines[3].line : null}</p>
                                 <br /><br /><br />
+                                <AddLine poem={poem} />
                                 {poem.user ? <i><p>started by: {poem.user.username}</p></i> : null}
 
                             </div>
