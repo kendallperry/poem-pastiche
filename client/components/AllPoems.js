@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchPoems } from "../store/poems";
-import SearchBar from "./SearchBar";
 
 class AllPoems extends React.Component {
     constructor(props) {
