@@ -4,7 +4,11 @@ body {
 
 a {
   text-decoration: none;
-  color: rgba(51, 72, 79, 0.851);
+  color: black;
+}
+
+a:hover {
+  color: rgb(155, 116, 123);
 }
 
 button {
@@ -47,7 +51,7 @@ form div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 10px;
 }
 
 .title {
@@ -55,11 +59,13 @@ form div {
 }
 
 .poem {
-  width: 200px;
-  border: 1px solid black;
-  padding: 15px;
+  width: 300px;
+  border: 1px solid white;
+  padding: 25px;
+  margin: 6px;
+  background: linear-gradient(90deg, rgba(238,174,202,0.6797312675070029) 0%, rgba(148,187,233,0.6237088585434174) 100%);  /* background: linear-gradient(152deg, rgba(255,255,255,0.6293110994397759) 0%, rgba(227,156,44,0.590095413165266) 35%, rgba(148,60,245,0.6797312675070029) 100%); */
 }
 
-.poem:hover {
-  border: 2px solid black;
-}
+/* .poem:hover {
+  border: 2px solid white;
+} */

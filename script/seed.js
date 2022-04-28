@@ -21,26 +21,32 @@ async function seed() {
   const poems = await Promise.all([
     Poem.create({
       title: "bright sounds",
+      firstLine: "i can feel you everywhere",
       userId: 1,
     }),
     Poem.create({
       title: "gradient sky",
+      firstLine: "blending colors",
       userId: 1,
     }),
     Poem.create({
       title: "everything bagels in spring",
+      firstLine: "picnic benches in the park",
       userId: 2,
     }),
     Poem.create({
       title: "ginger tea",
+      firstLine: "depends how long you steep",
       userId: 2,
     }),
     Poem.create({
       title: "for when the first stars appear",
+      firstLine: "rooftop starry nights",
       userId: 1,
     }),
     Poem.create({
       title: "polaroid magic",
+      firstLine: "with a single snap",
       userId: 1
     })
   ]);

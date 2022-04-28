@@ -10,6 +10,13 @@ const Poem = db.define('poem', {
             notEmpty: true,
           }, 
     },
+    firstLine: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+          }, 
+    }
 });
 
 module.exports = Poem;

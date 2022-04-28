@@ -5,6 +5,7 @@ import { Login, Signup } from './components/AuthForm';
 import Home from './components/Home';
 import {me} from './store'
 import AllPoems from "./components/AllPoems"
+import AddPoem from './components/AddPoem';
 
 /**
  * COMPONENT
@@ -23,6 +24,7 @@ class Routes extends Component {
           <Switch>
             <Route path="/home" component={Home} />
             <Route path='/poems' component={AllPoems} />
+            <Route path='/add' component={AddPoem} />
             <Redirect to="/home" />
           </Switch>
         ) : (
