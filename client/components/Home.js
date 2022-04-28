@@ -9,7 +9,7 @@ export const Home = props => {
 
   return (
     <div>
-      <h3>Welcome to Poem Potpourri, {username}</h3>
+      <h3>welcome to poem pastiche, {username}!</h3>
     </div>
   )
 }
