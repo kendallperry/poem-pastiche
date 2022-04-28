@@ -13,15 +13,9 @@ class AllPoems extends React.Component {
     }
 
     render() {
-        const { filteredPoems, poems } = this.props;
-        // poems = poems.filter((poem) =>
-        //   filteredPoems.includes(poem)
-        // );
-        console.log("lines", this.props)
+        const { poems } = this.props;
         return (
             <div id="all-poems-container">
-                {/* <SearchBar /> */}
-                {/* <h1 className="title"></h1> */}
                 <ul id="all-poems">
                     {poems.length === 0 ? <h2>No Poems Yet!</h2> : null}
                     {poems.map((poem) => {
@@ -39,31 +33,15 @@ class AllPoems extends React.Component {
                             </div>
                         )
                     })}
-                    {/* {poems.lines.map((line) => {
-                                    <div key={line.id}>
-                                        {line.line}
-                                    </div>
-                                })} */}
                 </ul>
             </div>
         )
     }
 }
 
-const searchPoems = (state, searchTerm) => {
-    if (searchTerm === "") {
-      return state.poems;
-    }
-    return state.poems.filter((poem) =>
-      poem.title.includes(searchTerm)
-    );
-  };
-
-
 const mapState = (state) => {
     return {
         poems: state.poems,
-        filteredPoems: searchPoems(state, state.searchTerm),
     }
 }
 
