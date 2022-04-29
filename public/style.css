@@ -121,3 +121,15 @@ input {
     rgba(148, 187, 233, 0.6237088585434174) 100%
   );
 }
+
+.second-word {
+  color: rgba(50, 33, 41, 0.68);
+}
+
+.third-word {
+  color: rgba(109, 74, 91, 0.68);
+}
+
+.fourth-word {
+  color: rgba(136, 115, 125, 0.68);
+}

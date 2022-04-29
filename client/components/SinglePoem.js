@@ -26,8 +26,6 @@ class SinglePoem extends React.Component {
   render() {
     let poemId = parseInt(this.props.match.params.poemId);
     let poems = this.props.poems; 
-
-    console.log("PROPS FOR SINGLE POEM", this.props, poemId);
     return (
       <div id="single-poem">
         <div>

@@ -4,7 +4,6 @@ import { fetchPoems } from "../store/poems";
 import AddLine from "./AddLine";
 import { Link } from "react-router-dom";
 
-
 class AllPoems extends React.Component {
   constructor(props) {
     super(props);
@@ -13,12 +12,6 @@ class AllPoems extends React.Component {
   componentDidMount() {
     this.props.displayPoems();
   }
-
-  //   componentDidUpdate() {
-  //       if (this.props.poems.lines.length !== this.props.poems.lines.length) {
-  //         this.props.displayPoems();
-  //       }
-  //   }
 
   render() {
     const { poems } = this.props;
@@ -30,19 +23,29 @@ class AllPoems extends React.Component {
             return (
               <div className="poem" key={poem.id}>
                 <>
-                <Link to={`/poems/${poem.id}`} key={poem.id}>
-                <strong>
-                  <h4>{poem.title}</h4>
-                </strong>
-                </Link>
+                  <Link to={`/poems/${poem.id}`} key={poem.id}>
+                    <strong>
+                      <h4>{poem.title}</h4>
+                    </strong>
+                  </Link>
                 </>
-                <br /> 
-                
-                <p>{poem.firstLine}</p>
-                <p>{poem.lines[poem.lines.length-4] ? poem.lines[poem.lines.length-4].line : null}</p>
-                <p>{poem.lines[poem.lines.length-3] ? poem.lines[poem.lines.length-3].line : null}</p>
-                <p>{poem.lines[poem.lines.length-2] ? poem.lines[poem.lines.length-2].line : null}</p>
-                <p>{poem.lines[poem.lines.length-1] ? poem.lines[poem.lines.length-1].line : null}</p>
+                <br />
+                <p className="fourth-word">{poem.firstLine}</p>
+                <p className="third-word">
+                  {poem.lines[poem.lines.length - 3]
+                    ? poem.lines[poem.lines.length - 3].line
+                    : null}
+                </p>
+                <p className="second-word">
+                  {poem.lines[poem.lines.length - 2]
+                    ? poem.lines[poem.lines.length - 2].line
+                    : null}
+                </p>
+                <p>
+                  {poem.lines[poem.lines.length - 1]
+                    ? poem.lines[poem.lines.length - 1].line
+                    : null}
+                </p>
                 <br />
                 <br />
                 <br />

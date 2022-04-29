@@ -26,7 +26,6 @@ class AddLine extends React.Component {
   }
 
   render() {
-    console.log("PROPS", this.props);
     return (
       <div id="add-line">
         <form id="add-line-form" onSubmit={this.handleSubmit}>
