@@ -7,6 +7,7 @@ import {me} from './store'
 import AllPoems from "./components/AllPoems"
 import AddPoem from './components/AddPoem';
 import SinglePoem from './components/SinglePoem';
+import Pastiche from './components/Pastiche';
 
 /**
  * COMPONENT
@@ -24,6 +25,7 @@ class Routes extends Component {
         {isLoggedIn ? (
           <Switch>
             <Route path="/home" component={Home} />
+            <Route path="/pastiche" component={Pastiche} /> 
             <Route exact path='/poems' component={AllPoems} />
             <Route exact path="/poems/:poemId" component={SinglePoem} />
             <Route path='/add' component={AddPoem} />
@@ -32,6 +34,7 @@ class Routes extends Component {
         ) : (
           <Switch>
             <Route path='/' exact component={ Login } />
+            <Route path="/pastiche" component={Pastiche} /> 
             <Route path="/login" component={Login} />
             <Route exact path='/poems' component={AllPoems} />
             <Route exact path="/poems/:poemId" component={SinglePoem} />

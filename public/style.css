@@ -79,3 +79,22 @@ input {
   display: flex;
   gap: 5px;
 }
+
+.circle {
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: aqua;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+}
+
+#word-collage-container {
+  padding: 20px;
+  margin: 20px;
+  color: black;
+}
