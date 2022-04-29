@@ -7,6 +7,10 @@ a {
   color: black;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a:hover {
   color: rgb(155, 116, 123);
 }
@@ -89,14 +93,23 @@ input {
   color: black;
 }
 
-#add-poem, #add-poem-form {
+#second-word-collage {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding: 100px;
+  margin: 40px;
+  color: black;
+}
+
+#add-poem, #add-poem-form, #single-poem {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-#add-poem {
+#add-poem, #single-poem {
   padding: 70px;
   align-content: center;
   margin-left: 25%;
