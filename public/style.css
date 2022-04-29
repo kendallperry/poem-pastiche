@@ -94,7 +94,10 @@ input {
 }
 
 #word-collage-container {
-  padding: 20px;
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  padding: 100px;
+  margin: 40px;
   color: black;
 }
