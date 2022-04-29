@@ -95,3 +95,16 @@ input {
   align-items: center;
   gap: 10px;
 }
+
+#add-poem {
+  padding: 70px;
+  align-content: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 0.6797312675070029) 0%,
+    rgba(148, 187, 233, 0.6237088585434174) 100%
+  );
+}
