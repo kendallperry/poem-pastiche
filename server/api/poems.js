@@ -24,15 +24,27 @@ router.post("/", async (req, res, next) => {
 
 router.get("/:poemId", async (req, res, next) => {
   try {
-    const singlePoem = await Poem.findOne({
-      where: { id: req.params.poemId },
-      include: PoemLine,
-    });
+    const singlePoem = await Poem.findByPk(req.params.poemId,
+      { include: [PoemLine] },
+    );
     res.send(singlePoem);
   } catch (err) {
     next(err);
   }
 });
+
+
+// router.get("/:poemId", async (req, res, next) => {
+//   try {
+//     const singlePoem = await Poem.findOne({
+//       where: { id: req.params.poemId },
+//       include: PoemLine,
+//     });
+//     res.send(singlePoem);
+//   } catch (err) {
+//     next(err);
+//   }
+// });
 
 
 
