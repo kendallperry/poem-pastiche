@@ -24,7 +24,7 @@ class AllPoems extends React.Component {
     return (
       <div id="all-poems-container">
         <ul id="all-poems">
-          {poems.length === 0 ? <h2>No Poems Yet!</h2> : null}
+          {poems.length === 0 ? <p>loading poems...</p> : null}
           {poems.map((poem) => {
             return (
               <div className="poem" key={poem.id}>
@@ -33,10 +33,10 @@ class AllPoems extends React.Component {
                 </strong>
                 <br />
                 <p>{poem.firstLine}</p>
-                <p>{poem.lines[0] ? poem.lines[0].line : null}</p>
-                <p>{poem.lines[1] ? poem.lines[1].line : null}</p>
-                <p>{poem.lines[2] ? poem.lines[2].line : null}</p>
-                <p>{poem.lines[3] ? poem.lines[3].line : null}</p>
+                <p>{poem.lines[poem.lines.length-4] ? poem.lines[poem.lines.length-4].line : null}</p>
+                <p>{poem.lines[poem.lines.length-3] ? poem.lines[poem.lines.length-3].line : null}</p>
+                <p>{poem.lines[poem.lines.length-2] ? poem.lines[poem.lines.length-2].line : null}</p>
+                <p>{poem.lines[poem.lines.length-1] ? poem.lines[poem.lines.length-1].line : null}</p>
                 <br />
                 <br />
                 <br />
