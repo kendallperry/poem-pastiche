@@ -32,6 +32,7 @@ const WordCollage = () => {
     easing: "easeInOutSine",
     //background: "#eeaeca",
     direction: "alternate",
+    //rotate: anime.stagger([-360, 360])
   });
 
   animation
