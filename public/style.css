@@ -80,19 +80,6 @@ input {
   gap: 5px;
 }
 
-.circle {
-  align-items: center;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: aqua;
-}
-
-.letter {
-  display: inline-block;
-  opacity: 0;
-}
-
 #word-collage-container {
   display: flex;
   flex-direction: column;
@@ -100,4 +87,11 @@ input {
   padding: 100px;
   margin: 40px;
   color: black;
+}
+
+#add-poem, #add-poem-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }

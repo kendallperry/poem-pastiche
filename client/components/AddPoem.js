@@ -36,14 +36,14 @@ class AddPoem extends React.Component {
             name="title"
             onChange={this.handleChange}
             value={this.state.title}
-          /><br />
+            />
 
           <label htmlFor="firstLine">first line:</label>
           <input
             name="firstLine"
             onChange={this.handleChange}
             value={this.state.firstLine}
-          /><br /> 
+          />
 
             <button className="add-poem-btn" type="submit">
               add poem

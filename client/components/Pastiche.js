@@ -19,7 +19,7 @@ const WordCollage = () => {
     targets: ".word-animation",
     autoplay: true,
     delay: anime.stagger(400, {
-      //grid: [test.list[0].length, test.list.length],
+      //grid: [targets[0], targets.length],
       from: "center",
     }),
     scale: anime.stagger([0.8, 1], {from: 'center'}), 
