@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchPoems } from "../store/poems";
 import AddLine from "./AddLine";
+import { Link } from "react-router-dom";
 
 
 class AllPoems extends React.Component {
@@ -28,10 +29,15 @@ class AllPoems extends React.Component {
           {poems.map((poem) => {
             return (
               <div className="poem" key={poem.id}>
+                <>
+                <Link to={`/poems/${poem.id}`} key={poem.id}>
                 <strong>
                   <h4>{poem.title}</h4>
                 </strong>
-                <br />
+                </Link>
+                </>
+                <br /> 
+                
                 <p>{poem.firstLine}</p>
                 <p>{poem.lines[poem.lines.length-4] ? poem.lines[poem.lines.length-4].line : null}</p>
                 <p>{poem.lines[poem.lines.length-3] ? poem.lines[poem.lines.length-3].line : null}</p>

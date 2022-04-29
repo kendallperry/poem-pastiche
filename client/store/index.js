@@ -4,8 +4,8 @@ import thunkMiddleware from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import auth from "./auth";
 import poems from "./poems";
-import line from "./line"
-import singlePoem from "./singlePoem"
+import line from "./line";
+import singlePoem from "./singlePoem";
 
 const reducer = combineReducers({
   auth,

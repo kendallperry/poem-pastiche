@@ -29,7 +29,7 @@ class AddPoem extends React.Component {
      // console.log("PROPS", this.props);
     return (
       <div id="add-poem">
-        <h2>start a new poem!</h2>
+        <h3>start a new poem!</h3>
         <form id="add-poem-form" onSubmit={this.handleSubmit}>
           <label htmlFor="title">name your poem:</label>
           <input
@@ -48,6 +48,7 @@ class AddPoem extends React.Component {
             <button className="add-poem-btn" type="submit">
               add poem
             </button>
+            <br />
         </form>
       </div>
     );

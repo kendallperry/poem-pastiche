@@ -1,11 +1,9 @@
 import axios from "axios";
 
-const initialState = {};
-
-const SINGLE_POEM = "SINGLE_POEM";
+const GET_SINGLE_POEM = "GET_SINGLE_POEM";
 
 const getSinglePoem = (poem) => ({
-  type: SINGLE_POEM,
+  type: GET_SINGLE_POEM,
   poem,
 });
 
@@ -13,6 +11,7 @@ export const fetchSinglePoem = (poemId) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(`api/poems/${poemId}`);
+      console.log("in poem thunk")
       dispatch(getSinglePoem(data));
     } catch (err) {
       console.log("There was a problem fetching a single product!", err);
@@ -20,11 +19,11 @@ export const fetchSinglePoem = (poemId) => {
   };
 };
 
-export default function singlePoemReducer(state = initialState, action) {
+export default (state = {}, action) => {
   switch (action.type) {
-    case SINGLE_POEM:
+    case GET_SINGLE_POEM:
       return action.poem;
     default:
       return state;
   }
-}
+};
