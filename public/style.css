@@ -87,3 +87,14 @@ input {
   border-radius: 50%;
   background-color: aqua;
 }
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+}
+
+#word-collage-container {
+  padding: 20px;
+  margin: 20px;
+  color: black;
+}

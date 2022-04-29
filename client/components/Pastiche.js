@@ -3,106 +3,110 @@ import ReactAnime from "react-animejs";
 const { Anime, stagger } = ReactAnime;
 import anime from "animejs";
 
-const ControlledDemo = () => {
-    const [control, setControl] = useState(null); //controller state
-  
-    const [meta, setMeta] = useState({
-      //meta state of the player
-      control: control,
-      progress: 0,
-      currentTime: 0,
-      duration: 0
-    });
 
-    anime({
-        targets: '.circle',
-        translateX: 500,
+const WordCollage = () => {
+  const [control, setControl] = useState(null); 
+
+  const [meta, setMeta] = useState({
+    //meta state of the player
+    control: control,
+    progress: 0,
+    currentTime: 0,
+    duration: 0,
+  });
+
+  const animation = anime.timeline({
+    targets: ".word-animation",
+    autoplay: true,
+    delay: anime.stagger(400, {
+      //grid: [test.list[0].length, test.list.length],
+      from: "center",
+    }),
+    scale: anime.stagger([0.8, 1], {from: 'center'}), 
+    loop: true,
+    rotate: {
+        value: 310,
+        duration: 5000,
+        easing: 'easeInExpo',
+      }, 
+    easing: "easeInOutSine",
+    //background: "#eeaeca",
+    direction: "alternate",
+  });
+
+  animation
+    .add({
+      scale: 0.5
     })
+    .add({
+      letterSpacing: "10px"
+    })
+    .add({
+      scale: 1
+    })
+    .add({
+      letterSpacing: "6px"
+    });
   
-    return (
-       <div className = "circle"></div>
-    //   <div className="animate">
-    //     <Anime
-    //       control={control}
-    //       setMeta={setMeta} // important to pull state of the player
-    //       animeConfig={{
-    //         autoplay: false,
-    //         duration: 1500,
-    //         easing: "easeInOutSine"
-    //       }}
-    //       initial={[
-    //         {
-    //           targets: ".tl_square",
-    //           translateX: 250
-    //         },
-    //         {
-    //           targets: ".tl_circle",
-    //           translateX: 250
-    //         },
-    //         {
-    //           targets: ".tl_triangle",
-    //           translateX: 250
-    //         }
-    //       ]}
-    //     >
-    //       <div
-    //         className="tl_square"
-    //         style={{ height: 50, width: 50, background: "#d3f454" }}
-    //       />
-    //       <div
-    //         className="tl_circle"
-    //         style={{
-    //           height: 50,
-    //           width: 50,
-    //           background: "#d3f454",
-    //           borderRadius: "50%"
-    //         }}
-    //       />
-    //       <div
-    //         className="tl_triangle"
-    //         style={{
-    //           height: 50,
-    //           width: 50,
-    //           background: "#d3f454",
-    //           clipPath: "polygon(50% 0, 0 100%, 100% 100%)"
-    //         }}
-    //       />
-    //     </Anime>
-    //     <div
-    //       className="button"
-    //       onClick={() => {
-    //         setControl("play");
-    //       }}
-    //     >
-    //       Play
-    //     </div>
-    //     <div
-    //       className="button"
-    //       onClick={() => {
-    //         setControl("pause");
-    //       }}
-    //     >
-    //       Pause
-    //     </div>
-    //     <div
-    //       className="button"
-    //       onClick={() => {
-    //         setControl("restart");
-    //       }}
-    //     >
-    //       Restart
-    //     </div>
-    //     <input
-    //       type="range"
-    //       min="1"
-    //       max="100"
-    //       value={meta.progress || 0}
-    //       className="slider"
-    //       id="myRange"
-    //       onChange={e => console.log(setControl(["seek", e.currentTarget.value]))}
-    //     />
-    //   </div>
-    );
-  };
 
-  export default ControlledDemo;
+  anime({
+    opacity: 1,
+    // translateY: 50, 
+    rotate: {
+      value: 360,
+      duration: 2000,
+      easing: 'easeInExpo'
+    }, 
+    scale: anime.stagger([0.7, 1], {from: 'center'}), 
+    delay: anime.stagger(100, {start: 1000}), 
+    translateX: [-10, 30],
+    loop: true,
+  }); 
+
+//   let wordCollage = ['c', 'o', 'l', 'l', 'a', 'g', 'e', ' ', 'o','f', ' ', 'w', 'o', 'r', 'd', 's'];
+
+
+  return (
+    
+    <>
+    <div id="word-collage-container">
+      <div className="word-animation">
+       <span>collage of words</span>
+      </div>
+      <div className="word-animation">
+       collage of words
+      </div>
+      <div className="word-animation">
+        collage of words
+      </div>
+      <div className="word-animation">
+        collage of words
+      </div>
+      <div className="word-animation">
+        collage of words
+      </div>
+      <div className="word-animation">
+        collage of words
+      </div>
+      <div className="word-animation">
+        collage of words
+      </div>
+      <div className="word-animation">
+       collage of words
+      </div>
+      <div className="word-animation">
+       collage of words
+      </div>
+    </div>
+      {/* <h2>
+          {wordCollage.map((letter) => {
+              return (
+                <span key={letter.id} className="letter">{letter}</span>
+              )
+          })}
+      </h2> */}
+    </>
+  );
+};
+
+export default WordCollage;
